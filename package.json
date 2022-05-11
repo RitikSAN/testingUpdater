@@ -1,0 +1,41 @@
+{
+  "name": "testing_updater",
+  "version": "5.12.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron .",
+    "build": "electron-builder build  --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sangwansangwan/testingUpdate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sangwansangwan/testingUpdate/issues"
+  },
+  "homepage": "https://github.com/sangwansangwan/testingUpdate#readme",
+  "devDependencies": {
+    "electron": "^18.2.0",
+    "electron-builder": "^23.0.3"
+  },
+  "dependencies": {
+    "electron-log": "^4.4.7",
+    "electron-updater": "^5.0.1"
+  },
+  "build": {
+    "win":{
+      "publish":[
+        {
+          "provider": "github",
+          "private":true,
+          "vPrefixedTagName" : false,
+          "token": "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"
+        }
+      ]
+    }
+  }
+}
